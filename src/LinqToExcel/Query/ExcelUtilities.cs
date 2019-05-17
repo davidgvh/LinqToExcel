@@ -21,7 +21,7 @@ namespace LinqToExcel.Query
                 fileNameLower.EndsWith("xlsm"))
             {
                 connString = string.Format(
-                    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0 Xml;HDR=YES;IMEX=1""",
+					@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0 Xml;HDR=YES;IMEX=1;TypeGuessRows=0""",
                     args.FileName);
             }
             else if (fileNameLower.EndsWith("xlsb"))
@@ -56,7 +56,7 @@ namespace LinqToExcel.Query
                 else
                 {
                     connString = string.Format(
-                        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0;HDR=YES;IMEX=1""",
+						@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 12.0;HDR=YES;IMEX=1;TypeGuessRows=0""",
                         args.FileName);
                 }
             }
